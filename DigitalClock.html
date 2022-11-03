@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #main {
+        height: 100%;
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 20%;
+        border: 1px solid red;
+        background-color: rgb(244, 23, 159);
+
+    }
+
+    #main>#clock {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        font-size: 50px;
+
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    #main>#clock>div {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        padding: 20px;
+        margin: 20px;
+        background-color: rgb(182, 161, 26);
+    }
+
+    span {
+        justify-content: center;
+        display: flex;
+        margin-top: 30px;
+
+    }
+</style>
+
+<body>
+
+    <div id="main">
+        <h1>Digital Clock</h1>
+
+        <div id="clock">
+            <div id="hour">22</div>
+            <span>:</span>
+            <div id="min">44</div>
+            <span>:</span>
+            <div id="sec">10</div>
+            <div id="ampm">PM</div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    function clock() {
+        let date = new Date();
+        let hours = date.getHours();
+        let mins = date.getMinutes();
+        let sec = date.getSeconds();
+        let half = "";
+        if (hours >= 12) {
+            half = "PM"
+        }
+        else {
+            half = "AM"
+        }
+
+        document.querySelector("#hour").innerText = hours;
+        document.querySelector("#min").innerText = mins;
+        document.querySelector("#sec").innerText = sec;
+        document.querySelector("#ampm").innerText = half;
+
+
+        setInterval(clock, 1000)
+    }
+    clock();
+
+
+</script>
