@@ -18,7 +18,7 @@ body {
   position: relative;
   width: 280px;
   height: 300px;
-  background: linear-gradient(to right, #c5cae9, #8c9eff);
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
   border-bottom-left-radius: 45%;
   border-bottom-right-radius: 45%;
 }
@@ -37,7 +37,7 @@ body {
   left: 10px;
   width: calc(100% - 20px);
   height: 50px;
-  background: linear-gradient(to left, #8c9eff, #8c9eff);
+  background: linear-gradient(to left, #f9f9f9, #d9d9d9);
   border-radius: 50%;
   box-sizing: border-box;
   overflow: hidden;
@@ -58,7 +58,7 @@ body {
   top: 40px;
   width: 160px;
   height: 180px;
-  border: 25px solid #8c9eff;
+  border: 25px solid #d9d9d9;
   border-left: 25px solid transparent;
   border-bottom: 25px solid transparent;
   border-radius: 50%;
@@ -86,7 +86,7 @@ body {
   right: 10px;
   bottom: 10px;
   border-radius: 50%;
-  background: linear-gradient(#8c9eff, #8c9eff);
+  background: linear-gradient(#f9f9f9, #d9d9d9);
 }
 .plate::after {
   content: "";
@@ -136,4 +136,52 @@ body {
   100% {
     transform: translateY(-300px) scaleX(10);
   }
+}
+
+@media screen and (min-width:100px) and (max-width:400px) {
+  .plate {
+   
+    width: 300px;
+    height: 100px;
+    
+  }
+  .cup {
+  
+    width: 180px;
+    height: 180px;
+   
+  }
+  .handle {
+    right: -60px;
+    width: 110px;
+    height: 105px;
+    border: 28px solid #d9d9d9;
+    /* border: 2px solid red; */
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 50%;
+    transform: rotate(42deg);
+    
+  }
+  .vapour {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+  }
+  .vapour span {
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 0px 15px;
+    min-width: 6px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s);
+  }
+
 }
