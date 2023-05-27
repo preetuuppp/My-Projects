@@ -1,5 +1,5 @@
 # Mini HTML CSS arts
-1.<h3>Animated Hot tea Cup</h3>=>https://hotanimatedtea.netlify.app/
-2.<h3>Eyes moving Emoticons</h3>=>https://emoticonsmouse.netlify.app/
+<h3>1. Animated Hot tea Cup</h3>=>https://hotanimatedtea.netlify.app/
+<h3>2. Eyes moving Emoticons</h3>=>https://emoticonsmouse.netlify.app/
 
 
